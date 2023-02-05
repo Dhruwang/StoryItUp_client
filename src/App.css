@@ -1,16 +1,14 @@
 *{
   box-sizing:border-box; 
 }
-.home{
-  height: 100vh;
-  width: 100%;
-}
+
 /* navbar css starts  */
 .navbar{
   height: 4rem;
   width: 100%;
-  background-color: blue;
   padding: 1rem;
+  position: fixed;
+  background-color: transparent;
 }
 .navbarInner{
   height: 100%;
@@ -41,3 +39,18 @@
 }
 /* navbar css ends  */
 
+/* home page css starts  */
+.home{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to right,#0B0023 , #15003A);
+}
+.vectorBackground{
+  height: 100%;
+  width: 100%;
+}
+.vectorBackground img{
+  height: 100%;
+  width: 100%;
+}
+/* home page css ends */
