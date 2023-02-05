@@ -1,5 +1,4 @@
 import React from 'react'
-import vector from '../images/vector.png'
 
 export default function Home() {
     return (

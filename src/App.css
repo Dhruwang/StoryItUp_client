@@ -151,10 +151,21 @@
 .sideNavbar{
   height: 100vh;
   width: 100vw;
-  background: #7447BE;
+  background: #15003af3;
   position: fixed;
   left: 100vw;
   transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sideNavbarInner ul{
+  list-style: none;
+  color: white;
+  font-size: 2rem;
+}
+.sideNavbarInner ul li{
+  margin: 1rem;
 }
 /* sideNavbar css ends */
 
@@ -180,6 +191,9 @@
 
   .homeContent h1 {
     font-size: 2.5rem;
+  }
+  .btn{
+    margin-bottom: 1rem;
   }
 }
 

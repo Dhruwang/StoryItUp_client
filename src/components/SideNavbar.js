@@ -15,6 +15,15 @@ export default function SideNavbar() {
             <button onClick={showResponsiveNavbar} className="navbarBtn">
                 <i class="bi bi-x cross"></i>
             </button>
+            <div className='sideNavbarInner'>
+                <ul>
+                    <li>Home</li>
+                    <li>Stories</li>
+                    <li>Investors</li>
+                    <li>About</li>
+                    <li>Login/Signup</li>
+                </ul>
+            </div>
         </div>
     )
 }
