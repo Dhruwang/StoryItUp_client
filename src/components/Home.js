@@ -9,6 +9,7 @@ export default function Home() {
                     <h1>"Stories That Inspires"</h1>
                     <p className='text-secondary'>We tell the stories of startups that are making a difference</p>
                     <div className='btn-container'>
+                        
                         <button className='btn'>Learn More</button>
                         <button className='btn-inverted'>Stories</button>
                     </div>
