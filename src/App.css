@@ -9,13 +9,38 @@
 }
 
 .btn {
+  border: 2px solid #7447BE;
   background-color: #7447BE;
   font-weight: bold;
   color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  border: none;
+  padding: 0.8rem;
+  border-radius: 1.5rem;
   cursor: pointer;
+  width: 8rem;
+  transition:all 0.2s ease-in-out;
+}
+.btn:hover{
+  border: 2px solid #7447BE;
+  background-color: transparent;
+  color: #7447BE;
+}
+.btn-inverted{
+  color: #7447BE;
+  font-weight: bold;
+  background-color: white;
+  padding: 0.8rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  width: 8rem;
+  border: 2px solid white;
+  transition:all 0.2s ease-in-out;
+}
+.btn-inverted:hover{
+  background: transparent;
+  color: white;
+}
+.btn-container > *{
+  margin: 0rem 0.5rem;
 }
 
 /* navbar css starts  */
@@ -83,7 +108,7 @@
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
 }
 
 .vectorBackground img {
@@ -92,10 +117,14 @@
 }
 
 .homeContent {
-  width: 30rem;
-  text-align: left;
+  width: 50rem;
+  text-align: center;
   color: white;
   padding: 3rem;
+}
+.homeContent p{
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .homeContent h1 {
