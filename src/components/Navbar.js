@@ -16,6 +16,7 @@ export default function Navbar() {
                     <li>About</li>
                     <li>Login/Signup</li>
                 </ul>
+                <i class="bi bi-list-nested hamburgerIcon"></i>
             </div>
         </div>
     </div>
