@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className='navbar'>
             <div className='navbarInner'>
                 <div className='navbarInnerLeft'>
-                    <img id='logo' src={logo}></img>
+                    <img id='logo' src={logo} alt="logo"></img>
                 </div>
                 <div className='navbarInnerRight'>
                     <ul className='navbarList'>

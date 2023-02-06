@@ -2,6 +2,12 @@
 
 * {
   box-sizing: border-box;
+} 
+::placeholder{
+  font-size: 0.7rem;
+}
+p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
 }
 
 .text-secondary {
@@ -105,7 +111,7 @@
 /* navbar css ends  */
 
 /* home page css starts  */
-.home {
+.home ,.login{
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(to right, #0B0023, #15003A);
@@ -171,6 +177,77 @@
   margin: 1rem;
 }
 /* sideNavbar css ends */
+/* login css starts  */
+
+.loginInner{
+  width: 30vw;
+  height: 70vh;
+  display: flex;
+}
+.loginInnerLeft{
+  width: 100%;
+  height: 100%;
+}
+.loginInnerLeft{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginInnerLeft p{
+  font-size: 0.8rem;
+}
+.loginInnerLeft h3{
+  margin: 0.5rem;
+}
+.loginInnerLeftContent{
+  width: fit-content;
+  margin: auto;
+}
+.loginForm >*{
+  margin-top: 1rem;
+}
+.loginInnerLeftContent h2{
+  margin-bottom: 0;
+}
+.formItem{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem;
+}
+.loginForm label{
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.formInput{
+  width: 15rem;
+  height: 2rem;
+  
+}
+.forgetBtn{
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.loginInnerRight{
+  background-color: rgb(223, 200, 255);
+}
+.loginForm button{
+  width: 100%; 
+  border-radius: 0rem;
+}
+.googleBtn{
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+
+}
+.googleBtn img{
+  height: 1rem;
+  width: 1rem;
+}
+/* login css ends */
 
 @media (min-width: 1200px) {}
 
