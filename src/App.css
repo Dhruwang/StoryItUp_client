@@ -1,43 +1,209 @@
-*{
-  box-sizing:border-box; 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+* {
+  box-sizing: border-box;
 }
-.home{
-  height: 100vh;
-  width: 100%;
+
+.text-secondary {
+  color: #7447BE;
 }
+
+.btn {
+  border: 2px solid #7447BE;
+  background-color: #7447BE;
+  font-weight: bold;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  width: 8rem;
+  transition:all 0.2s ease-in-out;
+}
+.btn:hover{
+  border: 2px solid #7447BE;
+  background-color: transparent;
+  color: #7447BE;
+}
+.btn-inverted{
+  color: #7447BE;
+  font-weight: bold;
+  background-color: white;
+  padding: 0.8rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  width: 8rem;
+  border: 2px solid white;
+  transition:all 0.2s ease-in-out;
+}
+.btn-inverted:hover{
+  background: transparent;
+  color: white;
+}
+.btn-container > *{
+  margin: 0rem 0.5rem;
+}
+
 /* navbar css starts  */
-.navbar{
+.navbar {
   height: 4rem;
   width: 100%;
-  background-color: blue;
   padding: 1rem;
+  position: fixed;
+  background-color: transparent;
 }
-.navbarInner{
+
+.navbarInner {
   height: 100%;
   display: flex;
   justify-content: space-between;
 }
-.navbarInnerLeft{
+
+.navbarInnerLeft {
   height: 100%;
 }
-.navbarInnerRight{
+
+.navbarInnerRight {
   height: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center
 }
-#logo{
+
+.hamburgerIcon {
+  color: white !important;
+  display: none;
+  font-size: 1.5rem;
+}
+
+#logo {
   height: 100%;
 
 }
-.navbarList{
+
+.navbarList {
   list-style: none;
   display: flex;
   color: white;
   text-transform: uppercase;
 }
+
 .navbarList li {
   margin: 0rem 1.5rem;
 }
+.navbarBtn{
+  background: transparent;
+  border: none;
+}
+.cross{
+  color: white !important;
+  position: absolute;
+  font-size: 2rem;
+  right: 5vw;
+  top: 2vh;
+}
+
 /* navbar css ends  */
 
+/* home page css starts  */
+.home {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to right, #0B0023, #15003A);
+
+}
+
+.vectorBackground {
+  height: 100%;
+  width: 100%;
+  background-image: url(./images//vector.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vectorBackground img {
+  height: 100%;
+  width: 100%;
+}
+
+.homeContent {
+  width: 50rem;
+  text-align: center;
+  color: white;
+  padding: 3rem;
+}
+.homeContent p{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.homeContent h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.homeContent button{
+  margin: 0rem 0.5rem;
+}
+
+/* home page css ends */
+
+/* sideNavbar css starts  */
+.sideNavbar{
+  height: 100vh;
+  width: 100vw;
+  background: #15003af3;
+  position: fixed;
+  left: 100vw;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sideNavbarInner ul{
+  list-style: none;
+  color: white;
+  font-size: 2rem;
+}
+.sideNavbarInner ul li{
+  margin: 1rem;
+}
+/* sideNavbar css ends */
+
+@media (min-width: 1200px) {}
+
+@media (max-width: 1024px) {
+  .navbarList li {
+    margin: 0rem 1rem;
+    font-size: 0.8rem;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .navbarList {
+    display: none;
+  }
+
+  .hamburgerIcon {
+    display: block;
+  }
+
+  .homeContent h1 {
+    font-size: 2.5rem;
+  }
+  .btn{
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .homeContent h1 {
+    font-size: 2rem;
+  }
+
+}
