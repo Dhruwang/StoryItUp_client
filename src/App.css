@@ -145,7 +145,7 @@
   font-family: 'Poppins', sans-serif;
 }
 .homeContent button{
-  margin: 0rem 0.5rem;
+  margin: 0.5rem;
 }
 
 /* home page css ends */
@@ -194,9 +194,6 @@
 
   .homeContent h1 {
     font-size: 2.5rem;
-  }
-  .btn{
-    margin-bottom: 1rem;
   }
 }
 
