@@ -2,16 +2,15 @@ import React from 'react'
 import googleIcon from "../images/google.png"
 import { Link } from 'react-router-dom'
 
-export default function Login() {
+export default function Signup() {
     return (
-        <div className='login'>
+        <div className='signup'>
             <div className='vectorBackground'>
                 <div className='loginInner'>
                     <div className='loginInnerLeft'>
                         <div className='loginInnerLeftContent'>
-                            <h2>Welcome Back</h2>
-                            <p>Please enter your details</p>
-                            <p>Don't have an account ? <Link className='text-secondary' to="/signup">Click Here</Link></p>
+                            <h2>Create Account</h2>
+                            <p>Already have an account ? <Link className='text-secondary' to="/login">Click Here</Link></p>
                             <form className='loginForm'>
                                 <div className='formItem'>
                                     <label>Email</label>
@@ -21,13 +20,20 @@ export default function Login() {
                                     <label>Password</label>
                                     <input type="password" className='formInput' placeholder='Enter your password'></input>
                                 </div>
-                                <div className='formItemInline'>
-                                    <input type="checkbox"></input>
-                                    <label>Remember Me</label>
+                                <div className='formItem'>
+                                    <label>Confirm Password</label>
+                                    <input type="password" className='formInput' placeholder='Confirm password'></input>
                                 </div>
-                                <a className='text-secondary forgetBtn' href='/forgotpassword'>Forgot Password</a>
-                                <br></br>
-                                <button className='btn'>Sign In</button>
+                                <div className='formItem'>
+                                    <label>Select Role</label>
+                                    <select name="roles" id="roles"  className='formInput'>
+                                        <option value="reader">Reader</option>
+                                        <option value="startupOwner">Startup Owner</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="investor">Investor</option>
+                                    </select>
+                                </div>
+                                <button className='btn'>Create</button>
                                 <button className='googleBtn'>Sign In with <img src={googleIcon} alt="googleIcon"></img> </button>
                             </form>
                         </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../images/logo.png"
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const handleResponsiveNavbar = ()=>{
@@ -19,11 +20,11 @@ export default function Navbar() {
                 </div>
                 <div className='navbarInnerRight'>
                     <ul className='navbarList'>
-                        <li>Home</li>
+                        <li><Link to="/">Home</Link></li>
                         <li>Stories</li>
                         <li>Investors</li>
                         <li>About</li>
-                        <li>Login/Signup</li>
+                        <li><Link to="/login">Login/Signup</Link></li>
                     </ul>
                     <button className='navbarBtn' onClick={handleResponsiveNavbar}>
                         <i class="bi bi-list-nested hamburgerIcon"></i>

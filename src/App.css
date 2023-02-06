@@ -96,6 +96,10 @@ p,h1,h2,h3,h4,h5,h6{
 .navbarList li {
   margin: 0rem 1.5rem;
 }
+.navbarList li a{
+  text-decoration: none;
+  color: white;
+}
 .navbarBtn{
   background: transparent;
   border: none;
@@ -111,7 +115,7 @@ p,h1,h2,h3,h4,h5,h6{
 /* navbar css ends  */
 
 /* home page css starts  */
-.home ,.login{
+.home ,.login,.signup{
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(to right, #0B0023, #15003A);
@@ -180,8 +184,7 @@ p,h1,h2,h3,h4,h5,h6{
 /* login css starts  */
 
 .loginInner{
-  width: 30vw;
-  height: 70vh;
+  width: 25rem;
   display: flex;
 }
 .loginInnerLeft{
@@ -193,6 +196,7 @@ p,h1,h2,h3,h4,h5,h6{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem 0rem;
 }
 .loginInnerLeft p{
   font-size: 0.8rem;
@@ -221,7 +225,7 @@ p,h1,h2,h3,h4,h5,h6{
   font-weight: bold;
 }
 .formInput{
-  width: 15rem;
+  width: 18rem;
   height: 2rem;
   
 }
