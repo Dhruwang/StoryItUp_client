@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default function Publish(props) {
 
     const [details, setdetails] = useState({ name: "", description: "", sector: "", founders: "", year: "", story: "", funding: "", problem: "", solution: "", future: "", website: "", linkedin: "", imgLink: "" })
-    const host = "http://localhost:8000"
+    const host = "https://storyitupbackend.onrender.com"
     useEffect(() => {
         props.setProgress(100)
     }, [])

@@ -5,7 +5,7 @@ export default function Signup(props) {
 
     const [credentials, setCredentials] = useState({ email: "", password: "", cpassword: "", role: "" })
     const Navigate = useNavigate();
-    const host = "http://localhost:8000"
+    const host = "https://storyitupbackend.onrender.com"
 
     const handleOnSubmit = async (e) => {
         e.preventDefault()

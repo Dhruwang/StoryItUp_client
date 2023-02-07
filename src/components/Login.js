@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
-const host = "http://localhost:8000"
+const host = "https://storyitupbackend.onrender.com"
 
 export default function Login(props) {
 
