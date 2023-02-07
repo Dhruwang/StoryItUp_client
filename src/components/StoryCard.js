@@ -1,18 +1,18 @@
 import React from 'react'
 import startupImage from "../images/test.jpg"
 
-export default function StoryCard() {
+export default function StoryCard(props) {
     return (
         <div className='storyCard'>
             <div className='storyCardImage'>
-                <img src={startupImage}></img>
+                <img src={props.image}></img>
             </div>
             <div className='storyCardContent'>
                 <div className='startupName text-secondary'>
-                    Cherry
+                    {props.name}
                 </div>
                 <div className='startupDescription'>
-                    Japnese startup cherry maps user data flow
+                    {props.description.slice(0,100)}
                 </div>
             </div>
             <div className='storyCardEnd'>

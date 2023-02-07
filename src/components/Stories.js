@@ -1,11 +1,29 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import successIllustartion from "../images/ddemo.jpg"
 import StoryCard from './StoryCard'
 
 
 export default function Stories(props) {
+
+    const [stories, setstories] = useState()
+    const host = "https://storyitupbackend.onrender.com"
+
+    const fetchStories=async()=>{
+        console.log("hello")
+        const response = await fetch(`${host}/story/fetchStories`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        const json = await response.json()
+        setstories(json)
+
+    }
+
     useEffect(() => {
       props.setProgress(100)
+      fetchStories()
     }, [])
     
     return (
@@ -16,6 +34,7 @@ export default function Stories(props) {
                         <h1>"Explore the Stories Behind Thriving Startups and Chart Your Course to Entrepreneurial Success."</h1>
                         <img src={successIllustartion} alt="titleImage"></img>
                     </div>
+                    {console.log(stories)}
                     <div className='storiesInnerBottom'>
                         <h4>ALL STORIES</h4>
                         <div className='searchAndFilters'>
@@ -33,9 +52,9 @@ export default function Stories(props) {
                         </div>
 
                         <div className='storiesContainer'>
-                            <StoryCard />
-                            <StoryCard />
-                            <StoryCard />
+                            {stories && stories.map((element)=>{
+                                return <StoryCard name={element.name} description={element.description} image={element.imgLink}/>
+                            })}
                         </div>
                     </div>
                 </div>
