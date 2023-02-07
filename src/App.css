@@ -264,26 +264,105 @@ p,h1,h2,h3,h4,h5,h6{
 #passwordMatchAlert{
   display: none;
 }
-#fillAlert,#fillAlert2{
+#fillAlert,#fillAlert2,#invalidCred{
   display: none;
 }
 /* login css ends */
 
 /* stories css starts  */
+.storiesMain{
+  display: flex;
+  flex-direction:column;
+  /* align-items: end; */
+  justify-content: end; 
+}
 .storiesInner{
-  margin-top: 8rem;
+  height: 90%;
   width: 90VW;
   background-color: rgba(0, 0, 0, 0.393);
   backdrop-filter: blur(5px);
   color: white;
   text-align: center;
   padding: 3rem;
+  position: absolute;
+  overflow-y: scroll;
 }
+.storiesInner h1{
+  margin-bottom: 1rem;
+}
+
 .storiesInner img{
-  height: 70vh;
+  height: 60vh;
   width: 50vw;
 }
+.storiesInnerBottom{
+  margin-top: 2rem;
+}
+.searchAndFilters{
+  margin-top: 1rem;
+  display:flex ;
+  align-items: center;
+  height: 3rem;
+
+}
+.categoryDropdown{
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-left: 1rem;
+  background-color: #7447BE;
+  color: white;
+  padding: 0rem 1rem;
+}
+.storySearch{
+  display: flex;
+  align-items: start;
+  background-color: rgba(255, 255, 255, 0.368);
+  max-width: fit-content;
+  border-radius: 2rem;
+
+}
+.storySearch input{
+  height: 2.5rem;
+  width: 20rem;
+  background-color: transparent;
+  border-radius: 2rem 0 0 2rem;
+  border: none;
+  padding: 0rem 1rem;
+  font-size: 1rem;
+}
+.storiesContainer{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
 /* stories css ends */
+/* storycard css starts  */
+.storyCard{
+  height: 30rem;
+  width: 20rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.storyCardImage img{
+  width: 100%;
+  height: 15rem;
+}
+.storyCardContent{
+  padding: 1rem;
+}
+.startupName{
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.storyCardEnd{
+  padding: 1rem;
+}
+/* storycard css ends */
 
 @media (min-width: 1200px) {}
 

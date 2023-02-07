@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 const host = "http://localhost:8000"
 
@@ -19,6 +19,9 @@ export default function Login(props) {
 
         });
         const json = await response.json()
+        if(json.error==="invalid credentials"){
+            document.getElementById("invalidCred").style.display = "block"
+        }
         if (json.success) {
             props.setProgress(100)
             // save authToken and redirect 
@@ -27,6 +30,7 @@ export default function Login(props) {
             // props.showAlert("success", "login successfully") 
         }
         else {
+            props.setProgress(100)
             // props.showAlert("danger", "login failed") 
         }
     }
@@ -35,6 +39,16 @@ export default function Login(props) {
     const handleOnChange = (event) => {
         setcredentials({ ...credentials, [event.target.name]: event.target.value })
     }
+    const checkLoginStatus =()=>{
+        if(localStorage.getItem("token")){
+            Navigate("/")
+        }
+    }
+
+    useEffect(() => {
+      checkLoginStatus()
+    }, [])
+    
     return (
         <div className='login'>
             <div className='vectorBackground'>
@@ -58,6 +72,7 @@ export default function Login(props) {
                                     <label>Remember Me</label>
                                 </div>
                                 <a className='text-secondary forgetBtn' href='/forgotpassword'>Forgot Password</a>
+                                <p className='text-red ' id='invalidCred'>Invalid Credentials</p>
                                 <br></br>
                                 <button className='btn' type='submit'>Sign In</button>
                             </form>
