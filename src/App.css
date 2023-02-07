@@ -291,9 +291,9 @@ p,h1,h2,h3,h4,h5,h6{
   margin-bottom: 1rem;
 }
 
-.storiesInner img{
-  height: 60vh;
-  width: 50vw;
+.imgTop{
+  height: 30rem;
+  width: 40rem;
 }
 .storiesInnerBottom{
   margin-top: 2rem;
@@ -302,6 +302,7 @@ p,h1,h2,h3,h4,h5,h6{
   margin-top: 1rem;
   display:flex ;
   align-items: center;
+  justify-content: center;
   height: 3rem;
 
 }
@@ -330,6 +331,9 @@ p,h1,h2,h3,h4,h5,h6{
   border: none;
   padding: 0rem 1rem;
   font-size: 1rem;
+}
+.storySearch .btn{
+  width: 3rem;
 }
 .storiesContainer{
   margin-top: 2rem;
@@ -402,7 +406,12 @@ p,h1,h2,h3,h4,h5,h6{
 }
 /* publish page css ends */
 
-@media (min-width: 1200px) {}
+@media (max-width: 1200px) {
+  .imgTop{
+    height: 20rem;
+    width: 30rem;
+  }
+}
 
 @media (max-width: 1024px) {
   .navbarList li {
@@ -425,8 +434,21 @@ p,h1,h2,h3,h4,h5,h6{
   .homeContent h1 {
     font-size: 2.5rem;
   }
-  .publishInner{
+  .publishInner,.storiesInner{
     padding: 1rem;
+  }
+  .storiesInner h1{
+    font-size: 1.5rem;
+  }
+  .imgTop{
+    height: 15rem;
+    width: 20rem;
+  }
+  .storySearch input{
+    width: 8rem;
+  }
+  .categoryDropdown{
+    width: 5rem;
   }
 }
 
@@ -434,6 +456,10 @@ p,h1,h2,h3,h4,h5,h6{
 
   .homeContent h1 {
     font-size: 2rem;
+  }
+  .imgTop{
+    height: 10rem;
+    width: 15rem;
   }
 
 }

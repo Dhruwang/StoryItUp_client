@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import logo from "../images/logo.png"
-import { Link,useNavigate } from 'react-router-dom';
+import { Link,useNavigate,useLocation } from 'react-router-dom';
 
 export default function Navbar() {
     const Navigate = useNavigate();
+    let location = useLocation();
     const handleResponsiveNavbar = ()=>{
         const sideNavbar = document.getElementById("sideNavbar");
         if(sideNavbar.style.left==="100vw"){
@@ -21,6 +22,7 @@ export default function Navbar() {
       const handleLogin = () => {
         Navigate("/login")
       }
+
     
     return (
         <div className='navbar'>
@@ -30,11 +32,11 @@ export default function Navbar() {
                 </div>
                 <div className='navbarInnerRight'>
                     <ul className='navbarList'>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/stories">Stories</Link></li>
-                        <li><Link to="/publish">Publish</Link></li>
-                        <li>Investors</li>
-                        <li>About</li>
+                        <li id='home'><Link to="/">Home</Link></li>
+                        <li id="stories"><Link to="/stories">Stories</Link></li>
+                        <li id='publish'><Link to="/publish">Publish</Link></li>
+                        <li id='investors'>Investors</li>
+                        <li id='about'>About</li>
                        <li>{ !localStorage.getItem("token")&& <button className='btn' onClick={handleLogin} >Login</button>}
                        { localStorage.getItem("token")&& <button className='btn' onClick={handleLogOut}>Logout</button>}</li>
 

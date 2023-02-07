@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import successIllustartion from "../images/ddemo.jpg"
 import StoryCard from './StoryCard'
 
@@ -8,7 +8,7 @@ export default function Stories(props) {
     const [stories, setstories] = useState()
     const host = "https://storyitupbackend.onrender.com"
 
-    const fetchStories=async()=>{
+    const fetchStories = async () => {
         console.log("hello")
         const response = await fetch(`${host}/story/fetchStories`, {
             method: 'GET',
@@ -22,17 +22,17 @@ export default function Stories(props) {
     }
 
     useEffect(() => {
-      props.setProgress(100)
-      fetchStories()
+        props.setProgress(100)
+        fetchStories()
     }, [])
-    
+
     return (
         <div className='stories'>
             <div className='vectorBackground storiesMain'>
                 <div className='storiesInner'>
                     <div className='storiesInnerTop'>
                         <h1>"Explore the Stories Behind Thriving Startups and Chart Your Course to Entrepreneurial Success."</h1>
-                        <img src={successIllustartion} alt="titleImage"></img>
+                        <img src={successIllustartion} alt="titleImage" className='imgTop'></img>
                     </div>
                     {console.log(stories)}
                     <div className='storiesInnerBottom'>
@@ -40,7 +40,11 @@ export default function Stories(props) {
                         <div className='searchAndFilters'>
                             <div className='storySearch'>
                                 <input type="text" placeholder='Search Stories'></input>
-                                <button className='btn'>Search</button>
+                                <button className='btn'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </button>
                             </div>
                             <div className='categories'>
                                 <select name="role" id="role" className=' categoryDropdown'>
@@ -52,8 +56,8 @@ export default function Stories(props) {
                         </div>
 
                         <div className='storiesContainer'>
-                            {stories && stories.map((element)=>{
-                                return <StoryCard name={element.name} description={element.description} image={element.imgLink}/>
+                            {stories && stories.map((element) => {
+                                return <StoryCard name={element.name} description={element.description} image={element.imgLink} />
                             })}
                         </div>
                     </div>
