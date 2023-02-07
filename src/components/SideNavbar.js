@@ -5,13 +5,15 @@ export default function SideNavbar() {
     const sideNavbar = document.getElementById("sideNavbar");
     if(sideNavbar.style.left==="100vw"){
         sideNavbar.style.left="0vw"
+        return
     }
     else{
         sideNavbar.style.left="100vw" 
     }
+    
 }
   return (
-    <div className='sideNavbar' id='sideNavbar'>
+    <div className='sideNavbar' id='sideNavbar' style={{left:"100vw"}}>
       <button className='navbarBtn'onClick={handleResponsiveNavbar}>
         <i class="bi bi-x cross"></i>
       </button>

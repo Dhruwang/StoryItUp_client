@@ -395,6 +395,10 @@ p,h1,h2,h3,h4,h5,h6{
 .problemsAndSolutions {
   text-align: start;
 }
+#MissingFieldAlert{
+  display: none;
+  margin-bottom: 1rem;
+}
 /* publish page css ends */
 
 @media (min-width: 1200px) {}
@@ -419,6 +423,9 @@ p,h1,h2,h3,h4,h5,h6{
 
   .homeContent h1 {
     font-size: 2.5rem;
+  }
+  .publishInner{
+    padding: 1rem;
   }
 }
 
