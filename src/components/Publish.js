@@ -37,7 +37,8 @@ export default function Publish(props) {
                 problem: details.problem,
                 solution: details.solution,
                 website: details.website,
-                linkedin: details.linkedin
+                linkedin: details.linkedin,
+                imgLink:details.imgLink
             })
 
         });
