@@ -124,7 +124,7 @@ p,h1,h2,h3,h4,h5,h6{
 /* navbar css ends  */
 
 /* home page css starts  */
-.home ,.login,.signup,.stories{
+.home ,.login,.signup,.stories,.publish{
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(to right, #0B0023, #15003A);
@@ -270,13 +270,12 @@ p,h1,h2,h3,h4,h5,h6{
 /* login css ends */
 
 /* stories css starts  */
-.storiesMain{
+.storiesMain,.publishMain{
   display: flex;
   flex-direction:column;
-  /* align-items: end; */
   justify-content: end; 
 }
-.storiesInner{
+.publishInner,.storiesInner{
   height: 90%;
   width: 90VW;
   background-color: rgba(0, 0, 0, 0.393);
@@ -363,6 +362,40 @@ p,h1,h2,h3,h4,h5,h6{
   padding: 1rem;
 }
 /* storycard css ends */
+
+/* publish page css starts  */
+
+.publishInner{
+  color: white;
+}
+.storyFormElement{
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.storyFormInput{
+  height: 2.5rem;
+  font-size: 1.5rem;
+  margin: 0.5rem 0rem;
+  background-color: rgba(255, 255, 255, 0.256);
+  border: none;
+  color: white;
+}
+.storyFormTextarea{
+  margin: 0.5rem 0rem;
+  background-color: rgba(255, 255, 255, 0.256);
+  border: none;
+  color: white;
+}
+.sectorDropdown{
+  font-size: 1rem;
+  color: black;
+}
+.problemsAndSolutions {
+  text-align: start;
+}
+/* publish page css ends */
 
 @media (min-width: 1200px) {}
 

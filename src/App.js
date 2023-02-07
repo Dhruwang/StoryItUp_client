@@ -8,6 +8,7 @@ import SideNavbar from './components/SideNavbar';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Stories from './components/Stories';
+import Publish from './components/Publish';
 
 function App() {
   const [progress, setProgress] = useState(0)
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element={<Login  setProgress={setProgress} />} />
           <Route path="/signup" element={<Signup  setProgress={setProgress}/>} />
           <Route path="/stories" element={<Stories  setProgress={setProgress}/>} />
+          <Route path="/publish" element={<Publish  setProgress={setProgress}/>} />
         </Routes>
       </BrowserRouter>
     </div>

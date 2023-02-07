@@ -32,6 +32,7 @@ export default function Navbar() {
                     <ul className='navbarList'>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/stories">Stories</Link></li>
+                        <li><Link to="/publish">Publish</Link></li>
                         <li>Investors</li>
                         <li>About</li>
                        <li>{ !localStorage.getItem("token")&& <button className='btn' onClick={handleLogin} >Login</button>}
