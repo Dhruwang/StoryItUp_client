@@ -8,6 +8,7 @@ export default function Login(props) {
     const Navigate = useNavigate();
 
     const handleOnSubmit = async (e) => {
+        props.setProgress(20)
         e.preventDefault();
         const response = await fetch(`${host}/auth/login`, {
             method: 'POST',
@@ -19,6 +20,7 @@ export default function Login(props) {
         });
         const json = await response.json()
         if (json.success) {
+            props.setProgress(100)
             // save authToken and redirect 
             localStorage.setItem('token', json.token)
             Navigate("/")

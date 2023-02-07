@@ -9,9 +9,15 @@
 p,h1,h2,h3,h4,h5,h6{
   margin: 0;
 }
+.m-0{
+  margin: 0;
+}
 
 .text-secondary {
   color: #7447BE;
+}
+.text-red{
+  color: red;
 }
 
 .btn {
@@ -95,6 +101,9 @@ p,h1,h2,h3,h4,h5,h6{
 
 .navbarList li {
   margin: 0rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .navbarList li a{
   text-decoration: none;
@@ -115,7 +124,7 @@ p,h1,h2,h3,h4,h5,h6{
 /* navbar css ends  */
 
 /* home page css starts  */
-.home ,.login,.signup{
+.home ,.login,.signup,.stories{
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(to right, #0B0023, #15003A);
@@ -179,6 +188,7 @@ p,h1,h2,h3,h4,h5,h6{
 }
 .sideNavbarInner ul li{
   margin: 1rem;
+  
 }
 /* sideNavbar css ends */
 /* login css starts  */
@@ -251,7 +261,29 @@ p,h1,h2,h3,h4,h5,h6{
   height: 1rem;
   width: 1rem;
 }
+#passwordMatchAlert{
+  display: none;
+}
+#fillAlert,#fillAlert2{
+  display: none;
+}
 /* login css ends */
+
+/* stories css starts  */
+.storiesInner{
+  margin-top: 8rem;
+  width: 90VW;
+  background-color: rgba(0, 0, 0, 0.393);
+  backdrop-filter: blur(5px);
+  color: white;
+  text-align: center;
+  padding: 3rem;
+}
+.storiesInner img{
+  height: 70vh;
+  width: 50vw;
+}
+/* stories css ends */
 
 @media (min-width: 1200px) {}
 

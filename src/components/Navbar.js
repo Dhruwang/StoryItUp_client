@@ -1,8 +1,9 @@
 import React from 'react'
 import logo from "../images/logo.png"
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+    const Navigate = useNavigate();
     const handleResponsiveNavbar = ()=>{
         const sideNavbar = document.getElementById("sideNavbar");
         if(sideNavbar.style.left==="100vw"){
@@ -12,6 +13,15 @@ export default function Navbar() {
             sideNavbar.style.left="100vw" 
         }
     }
+    const handleLogOut = () => {
+        localStorage.removeItem('token')
+        Navigate("/login")
+      }
+
+      const handleLogin = () => {
+        Navigate("/login")
+      }
+    
     return (
         <div className='navbar'>
             <div className='navbarInner'>
@@ -21,10 +31,12 @@ export default function Navbar() {
                 <div className='navbarInnerRight'>
                     <ul className='navbarList'>
                         <li><Link to="/">Home</Link></li>
-                        <li>Stories</li>
+                        <li><Link to="/stories">Stories</Link></li>
                         <li>Investors</li>
                         <li>About</li>
-                        <li><Link to="/login">Login</Link></li>
+                       <li>{ !localStorage.getItem("token")&& <button className='btn' onClick={handleLogin} >Login</button>}
+                       { localStorage.getItem("token")&& <button className='btn' onClick={handleLogOut}>Logout</button>}</li>
+
                     </ul>
                     <button className='navbarBtn' onClick={handleResponsiveNavbar}>
                         <i class="bi bi-list-nested hamburgerIcon"></i>
