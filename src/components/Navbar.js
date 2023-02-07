@@ -24,7 +24,7 @@ export default function Navbar() {
                         <li>Stories</li>
                         <li>Investors</li>
                         <li>About</li>
-                        <li><Link to="/login">Login/Signup</Link></li>
+                        <li><Link to="/login">Login</Link></li>
                     </ul>
                     <button className='navbarBtn' onClick={handleResponsiveNavbar}>
                         <i class="bi bi-list-nested hamburgerIcon"></i>
