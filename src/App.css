@@ -180,6 +180,7 @@ p,h1,h2,h3,h4,h5,h6{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 .sideNavbarInner ul{
   list-style: none;
@@ -283,8 +284,8 @@ p,h1,h2,h3,h4,h5,h6{
   color: white;
   text-align: center;
   padding: 3rem;
-  position: absolute;
   overflow-y: scroll;
+  z-index: 1;
 }
 .storiesInner h1{
   margin-bottom: 1rem;
