@@ -2,7 +2,8 @@ import React,{useEffect,useState} from 'react'
 import test from "../images/test.jpg"
 
 export default function Storyfull() {
-    const host = "http://localhost:8000"
+    const host = "https://storyitupbackend.onrender.com"
+
     const [story, setstory] = useState()
 
 
