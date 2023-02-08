@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function SideNavbar() {
   const handleResponsiveNavbar = ()=>{
@@ -19,11 +20,12 @@ export default function SideNavbar() {
       </button>
       <div className='sideNavbarInner'>
         <ul>
-          <li>Home</li>
-          <li>Stories</li>
-          <li>Investors</li>
-          <li>About</li>
-          <li>Login/Signup</li>
+          <li><Link to="/" onClick={handleResponsiveNavbar}>Home</Link></li>
+          <li><Link to="/stories" onClick={handleResponsiveNavbar}>Stories</Link></li>
+          <li><Link to="/publish" onClick={handleResponsiveNavbar}>Publish</Link></li>
+          <li><Link to="/investor" onClick={handleResponsiveNavbar}>Investor</Link></li>
+          <li><Link to="/about" onClick={handleResponsiveNavbar}>About</Link></li>
+          <li><Link to="/login" onClick={handleResponsiveNavbar}>Login</Link></li>
         </ul>
       </div>
     </div>

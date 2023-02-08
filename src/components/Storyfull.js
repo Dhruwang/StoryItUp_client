@@ -30,7 +30,6 @@ export default function Storyfull() {
         story && <div className='storyfull'>
             <div className='vectorBackground storiesMain'>
                 <div className='storyfullInner'>
-                    {console.log(story)}
                     <div className='storyFullInnerTop'>
                         <p>JOURNEY OF </p>
                         <div className='storyFullInnerTopMain'>

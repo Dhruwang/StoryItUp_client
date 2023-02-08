@@ -211,6 +211,11 @@ p,h1,h2,h3,h4,h5,h6{
   margin: 1rem;
   
 }
+.sideNavbarInner ul li a{
+  color: white;
+  text-decoration: none;
+  
+}
 /* sideNavbar css ends */
 /* login css starts  */
 
@@ -427,6 +432,9 @@ p,h1,h2,h3,h4,h5,h6{
 /* publish page css ends */
 
 /* storyfull css starts  */
+.storyfullInner{
+  overflow-x: hidden;
+}
 .storyFullInnerTop{
   color: white;
   display: flex;
@@ -497,12 +505,18 @@ p,h1,h2,h3,h4,h5,h6{
     height: 20rem;
     width: 30rem;
   }
+  .storyFullInnerCover img{
+    width: 50rem;
+  }
 }
 
 @media (max-width: 1024px) {
   .navbarList li {
     margin: 0rem 1rem;
     font-size: 0.8rem;
+  }
+  .storyFullInnerCover img{
+    width: 35rem;
   }
 
 
@@ -520,7 +534,7 @@ p,h1,h2,h3,h4,h5,h6{
   .homeContent h1 {
     font-size: 2.5rem;
   }
-  .publishInner,.storiesInner{
+  .publishInner,.storiesInner,.storyfullInner{
     padding: 1rem;
   }
   .storiesInner h1{
@@ -536,6 +550,16 @@ p,h1,h2,h3,h4,h5,h6{
   .categoryDropdown{
     width: 5rem;
   }
+  .storyFullInnerCover img{
+    width: 25rem;
+  }
+  .storyFullInnerTopMain {
+    margin: 1rem;
+  }
+  .startupStoryDiv h3,.factSheetDiv h3,.problemSolutionDiv h3{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -546,6 +570,9 @@ p,h1,h2,h3,h4,h5,h6{
   .imgTop{
     height: 10rem;
     width: 15rem;
+  }
+  .storyFullInnerCover img{
+    width: 90vw;
   }
 
 }
