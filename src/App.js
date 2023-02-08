@@ -10,6 +10,7 @@ import Signup from './components/Signup';
 import Stories from './components/Stories';
 import Publish from './components/Publish';
 import Storyfull from './components/Storyfull';
+import Investor from './components/Investor';
 
 function App() {
   const [progress, setProgress] = useState(0)
@@ -29,6 +30,7 @@ function App() {
           <Route path="/signup" element={<Signup  setProgress={setProgress}/>} />
           <Route path="/stories" element={<Stories  setProgress={setProgress}/>} />
           <Route path="/publish" element={<Publish  setProgress={setProgress}/>} />
+          <Route path="/investor" element={<Investor  setProgress={setProgress}/>} />
           <Route path="/story/:id" element={<Storyfull  setProgress={setProgress}/>} />
           
         </Routes>

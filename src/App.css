@@ -147,7 +147,7 @@ p,h1,h2,h3,h4,h5,h6{
 /* navbar css ends  */
 
 /* home page css starts  */
-.home ,.login,.signup,.stories,.publish,.storyfull{
+.home ,.login,.signup,.stories,.publish,.storyfull,.investor{
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(to right, #0B0023, #15003A);
@@ -366,11 +366,13 @@ p,h1,h2,h3,h4,h5,h6{
 .storiesContainer{
   margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 /* stories css ends */
 /* storycard css starts  */
 .storyCard{
+  margin-top: 2rem;
   height: 30rem;
   width: 20rem;
   background-color: white;
@@ -502,6 +504,81 @@ p,h1,h2,h3,h4,h5,h6{
   font-weight: bolder;
 }
 /* storyfull css ends */
+/* investor card css starts  */
+.investorCard{
+  height: 25rem;
+  width: 20rem;
+  overflow: hidden; 
+  
+  border: 10px solid rgba(255, 255, 255, 0.24);
+}
+.investorCardInner{
+  height: 200%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+.investorImage,.investorInfo{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.investorImage img{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+.investorLinks{
+  text-align: center;
+  margin: 1rem 0rem;
+}
+.investorLinks i{
+  margin: 1rem 0.5rem;
+}
+.cardToggle1,.cardToggle2{
+  width: 100%;
+  height: 5%;
+
+}
+.investorCardSection1,.investorCardSection2{
+  width: 100%;
+  height: 45%;
+}
+.cardToggleBtn{
+  width: 100%;
+  height: 100%;
+  background-color: #7447BE;
+  border: none;
+  color: white;
+}
+.investorLinks a {
+  color: black;
+  text-decoration: none;
+}
+.investorInterestDiv{
+  text-align: center;
+}
+.investorInterest{
+  margin-top: 1rem;
+}
+.investorInterest span{
+  border: 2px solid black;
+  padding: 0.5rem;
+  margin: 0rem 0.25rem;
+}
+.investorCardSection1{
+  padding: 1rem;
+}
+.investorPast{
+  margin-top: 1rem;
+}
+
+/* investor card css ends */
+
 
 @media (max-width: 1200px) {
   .imgTop{

@@ -54,8 +54,9 @@ export default function Stories(props) {
                             </div>
                         </div>
 
-                        <div className='storiesContainer'>
+                        <div className='storiesContainer '>
                             {stories && stories.map((element) => {
+
                                 return <StoryCard name={element.name} description={element.description} image={element.imgLink} _id={element._id} />
                             })}
                         </div>
