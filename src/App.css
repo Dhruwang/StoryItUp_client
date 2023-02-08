@@ -6,6 +6,26 @@
 ::placeholder{
   font-size: 0.7rem;
 }
+/* scroll bar css  */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4c4c4c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 p,h1,h2,h3,h4,h5,h6{
   margin: 0;
 }
@@ -124,7 +144,7 @@ p,h1,h2,h3,h4,h5,h6{
 /* navbar css ends  */
 
 /* home page css starts  */
-.home ,.login,.signup,.stories,.publish{
+.home ,.login,.signup,.stories,.publish,.storyfull{
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(to right, #0B0023, #15003A);
@@ -276,7 +296,7 @@ p,h1,h2,h3,h4,h5,h6{
   flex-direction:column;
   justify-content: end; 
 }
-.publishInner,.storiesInner{
+.publishInner,.storiesInner,.storyfullInner{
   height: 90%;
   width: 90VW;
   background-color: rgba(0, 0, 0, 0.393);
@@ -405,6 +425,72 @@ p,h1,h2,h3,h4,h5,h6{
   margin-bottom: 1rem;
 }
 /* publish page css ends */
+
+/* storyfull css starts  */
+.storyFullInnerTop{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.storyFullInnerTop h1{
+  text-transform: uppercase;
+}
+.storyFullInnerCover img{
+  top: 10rem;
+  width: 60rem;
+}
+.storyFullInnerTopMain{
+  margin: 3rem;
+}
+.startupSector{
+  border: 2px solid white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.startupLinks{
+  display: flex;
+  color: white;
+  margin-bottom: 1rem;
+}
+.startupLinks i{
+  font-size: 2rem;
+  margin: 0rem 1rem;
+}
+.startupLinks a{
+  color: white;
+}
+.startupStoryDiv{
+  text-align: start;
+  margin-top: 1rem;
+}
+.startupStoryDiv h3,.factSheetDiv h3,.problemSolutionDiv h3{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.factSheetDiv{
+  text-align: left;
+  margin: 3rem;
+  border: 2px dotted white;
+  width: 100%;
+  padding: 1rem;
+}
+.factSheetInner p{
+  font-weight: bolder;
+  font-size: 2rem;
+}
+.factSheetInner{
+  margin-top: 1rem;
+}
+.problemSolutionDiv{
+  text-align: left;
+}
+.problemP{
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+/* storyfull css ends */
 
 @media (max-width: 1200px) {
   .imgTop{

@@ -9,7 +9,6 @@ export default function Stories(props) {
     const host = "https://storyitupbackend.onrender.com"
 
     const fetchStories = async () => {
-        console.log("hello")
         const response = await fetch(`${host}/story/fetchStories`, {
             method: 'GET',
             headers: {
@@ -57,7 +56,7 @@ export default function Stories(props) {
 
                         <div className='storiesContainer'>
                             {stories && stories.map((element) => {
-                                return <StoryCard name={element.name} description={element.description} image={element.imgLink} />
+                                return <StoryCard name={element.name} description={element.description} image={element.imgLink} _id={element._id} />
                             })}
                         </div>
                     </div>

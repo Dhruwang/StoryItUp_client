@@ -1,7 +1,13 @@
 import React from 'react'
-import startupImage from "../images/test.jpg"
+import { useNavigate } from 'react-router-dom'
 
 export default function StoryCard(props) {
+
+    const Navigate = useNavigate();
+
+    const handleReadMore=()=>{
+        Navigate(`/story/${props._id}`)
+    }
     return (
         <div className='storyCard'>
             <div className='storyCardImage'>
@@ -16,7 +22,7 @@ export default function StoryCard(props) {
                 </div>
             </div>
             <div className='storyCardEnd'>
-                <button className='btn'>
+                <button className='btn' onClick={handleReadMore}>
                     Read More
                 </button>
             </div>
