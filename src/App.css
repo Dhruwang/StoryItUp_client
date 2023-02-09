@@ -238,6 +238,12 @@ p,h1,h2,h3,h4,h5,h6{
   text-decoration: none;
   
 }
+.sideNavBarBtn{
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: white;
+}
 /* sideNavbar css ends */
 /* login css starts  */
 

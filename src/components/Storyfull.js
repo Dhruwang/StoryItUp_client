@@ -83,7 +83,7 @@ export default function Storyfull(props) {
 
     useEffect(() => {
       fetchStory()
-      fetchRole()
+    //   fetchRole() 
     }, [])
     
 
@@ -92,12 +92,12 @@ export default function Storyfull(props) {
             <div className='vectorBackground storiesMain'>
                 <div className='storyfullInner'>
                     <div className='storyFullInnerTop'>
-                        <div className='storyEditIcons'>
+                        {localStorage.getItem("token") && props.decodeToken(localStorage.getItem("token")).role ==="admin" && <div className='storyEditIcons'>
                             <button className='btn' onClick={handleDelete}><i class="bi bi-trash"></i></button>
                             <button className='btn' onClick={handleEdit} id="storyEditBtn"><i class="bi bi-pen"></i></button> 
                             <button className='btn' onClick={handleSave} id="storySaveBtn"><i class="bi bi-save"></i></button> 
                             
-                        </div>
+                        </div>}
                     
                         <p>JOURNEY OF </p>
                         <div className='storyFullInnerTopMain'>

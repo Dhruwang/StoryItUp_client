@@ -31,6 +31,7 @@ export default function Login(props) {
             localStorage.setItem('token', json.token)
             props.decodeToken(json.token)
             Navigate("/")
+            window.location.reload()
             // props.showAlert("success", "login successfully") 
         }
         else {
