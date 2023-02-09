@@ -50,7 +50,7 @@ export default function Navbar(props) {
                         <li id="stories"><Link to="/stories">Stories</Link></li>
                         <li id='publish'><Link to="/publish">Publish</Link></li>
                         <li id='investors'><Link to="/investor">Investors</Link></li>
-                        <li id='about'>About</li>
+                        <li id='about'><Link to="/about">About</Link></li>
                        <li>{ !localStorage.getItem("token")&& <button className='btn' onClick={handleLogin} >Login</button>}
                        { localStorage.getItem("token")&& <button className='btn' onClick={handleLogOut}>Logout</button>}</li>
 
