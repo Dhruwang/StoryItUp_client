@@ -70,12 +70,12 @@ export default function Storyfull(props) {
         
     }
     const fetchRole = ()=>{
-        if(!localStorage.getItem("token")){
+        if(document.getElementsByClassName("storyEditIcons")[0] && !localStorage.getItem("token")){
             // console.log(document.getElementsByClassName("storyEditIcons")[0])
             document.getElementsByClassName("storyEditIcons")[0].style.display = "none" 
             return;
         }
-        else if(props.decodeToken(localStorage.getItem("token")).role!=="admin"){
+        else if(document.getElementsByClassName("storyEditIcons")[0] && props.decodeToken(localStorage.getItem("token")).role!=="admin"){
             document.getElementsByClassName("storyEditIcons")[0].style.display = "none" 
             return
         }
