@@ -35,7 +35,7 @@ export default function Navbar() {
                         <li id='home'><Link to="/">Home</Link></li>
                         <li id="stories"><Link to="/stories">Stories</Link></li>
                         <li id='publish'><Link to="/publish">Publish</Link></li>
-                        <li id='investors'>Investors</li>
+                        <li id='investors'><Link to="/investor">Investors</Link></li>
                         <li id='about'>About</li>
                        <li>{ !localStorage.getItem("token")&& <button className='btn' onClick={handleLogin} >Login</button>}
                        { localStorage.getItem("token")&& <button className='btn' onClick={handleLogOut}>Logout</button>}</li>

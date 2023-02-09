@@ -11,6 +11,7 @@ import Stories from './components/Stories';
 import Publish from './components/Publish';
 import Storyfull from './components/Storyfull';
 import Investor from './components/Investor';
+import InvestorRegister from './components/InvestorRegister';
 
 function App() {
   const [progress, setProgress] = useState(0)
@@ -32,6 +33,7 @@ function App() {
           <Route path="/publish" element={<Publish  setProgress={setProgress}/>} />
           <Route path="/investor" element={<Investor  setProgress={setProgress}/>} />
           <Route path="/story/:id" element={<Storyfull  setProgress={setProgress}/>} />
+          <Route path="/investorRegister" element={<InvestorRegister  setProgress={setProgress}/>} />
           
         </Routes>
       </BrowserRouter>

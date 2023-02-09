@@ -1,34 +1,35 @@
 import React from 'react'
-import test from "../images/test2.jpg"
 
-export default function InvestorCard() {
+export default function InvestorCard(props) {
     const goUp = ()=>{
         document.getElementById("investorCardInner").style.transform = "translateY(-50%)"
     }
     const goDown = ()=>{
         document.getElementById("investorCardInner").style.transform = "translateY(0%)"
     }
+    const{name,description,interest,email,imgLink,profession,linkedin,twitter,experience} = props.details
     return (
         <div className='investorCard'>
+            {console.log(props.details)}
             <div className='investorCardInner' id='investorCardInner'>
                 <div className='investorCardSection1'>
                     <div className='investorImage'>
-                        <img src={test}></img>
+                        <img src={imgLink}></img>
                     </div>
                     <div className='investorInfo'>
-                        <h4>Dhruwang Jariwala</h4>
-                        <p>CEO at StoryItUp</p>
+                        <h4 className='text-secondary'>{name}</h4>
+                        <p>{profession}</p>
                         <div className='investorLinks'>
-                        <a href='mailto:dhruwangjariwala18@gmail.com' id='mailIcon'><i class="bi bi-envelope" ></i></a>
-                        <i class="bi bi-linkedin"></i>
+                        <a href={`mailto:${email}`} id='mailIcon'><i class="bi bi-envelope" ></i></a>
+                        <a href={linkedin}><i class="bi bi-linkedin"></i></a>
+                        <a href={twitter}><i class="bi bi-twitter"></i></a>
                         <i class="bi bi-twitter"></i>
                         </div>
                     </div>
                     <div className='investorInterestDiv'>
                         <h4>Interests</h4>
                         <div className='investorInterest'>
-                            <span>Education</span>
-                            <span>Finance</span>
+                            <span>{interest}</span>
                         </div>
                     </div>
                 </div>
@@ -41,12 +42,11 @@ export default function InvestorCard() {
                 <div className='investorCardSection1'>
                     <div className='investorBio'>
                         <h4>About</h4>
-                        <p>I am a star investor and i am extremely rich. I usually invest in real estate and tech</p>
+                        <p>{description}</p>
                     </div>
                     <div className='investorPast'>
                         <h4>Past Investments</h4>
-                        <p>Investor at Google</p>
-                        <p>Investor at Facebook</p>
+                        <p>{experience}</p>
                     </div>
                 </div>
             </div>

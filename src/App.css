@@ -304,7 +304,7 @@ p,h1,h2,h3,h4,h5,h6{
   flex-direction:column;
   justify-content: end; 
 }
-.publishInner,.storiesInner,.storyfullInner{
+.publishInner,.storiesInner,.storyfullInner,.investorInner{
   height: 90%;
   width: 90VW;
   background-color: rgba(0, 0, 0, 0.393);
@@ -519,6 +519,7 @@ p,h1,h2,h3,h4,h5,h6{
   flex-direction: column;
   background-color: white;
   transition: all 0.3s ease-in-out;
+  color: black;
 }
 .investorImage,.investorInfo{
   margin-top: 1rem;
@@ -534,7 +535,7 @@ p,h1,h2,h3,h4,h5,h6{
 }
 .investorLinks{
   text-align: center;
-  margin: 1rem 0rem;
+  margin-top: 1rem;
 }
 .investorLinks i{
   margin: 1rem 0.5rem;
@@ -578,6 +579,36 @@ p,h1,h2,h3,h4,h5,h6{
 }
 
 /* investor card css ends */
+/* investor page css starts */
+.investorPageCoverImg{
+  margin-top: 1rem;
+}
+.investorCardContainer{
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.investorCardContainer > *{
+  margin-top: 2rem;
+  
+}
+.registerInvestorDiv{
+  margin-top: 1rem;
+}
+.registerInvestorBtn{
+  width: 15rem;
+  border-radius: 0rem;
+}
+.registerInvestorQuote{
+  border: 2px dotted white;
+  margin: 2rem 0rem;
+  padding: 1rem ;
+}
+#InvestorMissingFieldAlert{
+  display: none;
+}
+/* investor page css ends*/
 
 
 @media (max-width: 1200px) {
@@ -587,6 +618,10 @@ p,h1,h2,h3,h4,h5,h6{
   }
   .storyFullInnerCover img{
     width: 50rem;
+  }
+  .investorCard{
+    height: 25rem;
+    width: 18rem;
   }
 }
 
@@ -598,7 +633,22 @@ p,h1,h2,h3,h4,h5,h6{
   .storyFullInnerCover img{
     width: 35rem;
   }
+  .investorCard{
+    height: 25rem;
+    width: 16rem;
+  }
 
+
+}
+@media (max-width: 885px) {
+
+  .investorCard{
+    height: 23rem;
+    width: 14rem;
+  }
+  .investorCardContainer{
+    margin-top: 1rem;
+  }
 
 }
 
@@ -614,7 +664,7 @@ p,h1,h2,h3,h4,h5,h6{
   .homeContent h1 {
     font-size: 2.5rem;
   }
-  .publishInner,.storiesInner,.storyfullInner{
+  .publishInner,.storiesInner,.storyfullInner,.investorInner{
     padding: 1rem;
   }
   .storiesInner h1{
@@ -640,9 +690,10 @@ p,h1,h2,h3,h4,h5,h6{
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
+  
 }
 
-@media (max-width: 640px) {
+@media (max-width: 680px) {
 
   .homeContent h1 {
     font-size: 2rem;
@@ -653,6 +704,14 @@ p,h1,h2,h3,h4,h5,h6{
   }
   .storyFullInnerCover img{
     width: 90vw;
+  }
+  .investorCardContainer{
+    justify-content: center;
+    align-items: center;
+  }
+  .investorCard{
+    height: 23rem;
+    width: 90%;
   }
 
 }
