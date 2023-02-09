@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Publish(props) {
 
     const [details, setdetails] = useState({ name: "", description: "", sector: "", founders: "", year: "", story: "", funding: "", problem: "", solution: "", future: "", website: "", linkedin: "", imgLink: "" })
+    const Navigate = useNavigate();
     const host = "https://storyitupbackend.onrender.com" 
     // const host = "http://localhost:8000" 
     useEffect(() => {
         props.setProgress(100)
+        if(!localStorage.getItem("token")){
+            document.getElementById("publishForm").style.display = "none"
+        }
+        else{
+            document.getElementById("publishInnerAlt").style.display = "none"
+        }
     }, [])
 
     const addProblem = (e) => {
@@ -49,6 +57,9 @@ export default function Publish(props) {
 
 
     }
+    const goToLogin =()=>{
+        Navigate("/login")
+    }
     const handleOnChange = (event) => {
         setdetails({ ...details, [event.target.name]: event.target.value })
     }
@@ -56,6 +67,11 @@ export default function Publish(props) {
         <div className='publish'>
             <div className='vectorBackground publishMain'>
                 <div className='publishInner'>
+                    <div id='publishInnerAlt'>
+                        <h1>Login to Publish Your own story</h1>
+                        <button className='btn' onClick={goToLogin}>Login</button>
+                    </div>
+                    <div className='publishForm' id='publishForm'>
                     <h1>PUBLISH YOUR <span className='text-secondary'>STORY!</span></h1>
                     <form className='storyForm' onSubmit={handleOnSubmit}>
                         <div className='storyFormElement' >
@@ -120,6 +136,8 @@ export default function Publish(props) {
                         <p className='text-red' id='MissingFieldAlert'>All fields marked with * are compulsary</p>
                         <button className='btn'>Publish</button>
                     </form>
+                    </div>
+                    
                 </div>
 
             </div>

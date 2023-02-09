@@ -403,6 +403,9 @@ p,h1,h2,h3,h4,h5,h6{
 .publishInner{
   color: white;
 }
+#publishInnerAlt button{
+  margin-top: 1rem;
+}
 .storyFormElement{
   margin: 1rem 0rem;
   display: flex;
