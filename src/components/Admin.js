@@ -3,7 +3,7 @@ import React,{useEffect} from 'react'
 export default function Admin(props) {
 
     useEffect(() => {
-      if(props.decodeToken(localStorage.getItem("token")).role!=="admin"){
+      if(localStorage.getItem("token") && props.decodeToken(localStorage.getItem("token")).role!=="admin"){
         document.getElementById("admin").style.display = "none"
       }
     }, [])
