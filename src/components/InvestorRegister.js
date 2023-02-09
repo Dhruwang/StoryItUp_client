@@ -4,7 +4,9 @@ import React,{useState} from "react";
 export default function InvestorRegister() {
 
     const [details, setdetails] = useState({name:"",email:"",experience:"",profession:"",interest:"",description:"",imgLink:"",linkedin:"",twitter:""})
-    const host = "http://localhost:8000"
+    // const host = "http://localhost:8000" 
+    const host = "https://storyitupbackend.onrender.com" 
+
 
     const handleOnSubmit = async (e) => {
         e.preventDefault();
@@ -139,7 +141,7 @@ export default function InvestorRegister() {
                             ></textarea>
                         </div>
                         <div className="storyFormElement">
-                            <label>Please Provide Your Profile Photo*</label>
+                            <label>Please Provide Your Profile Photo Link*</label>
                             <input type="text" id="imgLink" value={details.imgLink} name="imgLink" className="storyFormInput" onChange={handleOnChange}></input>
                         </div>
                         <div className="storyFormElement">

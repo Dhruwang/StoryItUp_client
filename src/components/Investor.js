@@ -5,7 +5,9 @@ import { useNavigate } from 'react-router-dom'
 export default function Investor(props) {
   const Navigate = useNavigate();
   const [investors, setinvestors] = useState()
-  const host = "http://localhost:8000"
+  // const host = "http://localhost:8000" 
+  const host = "https://storyitupbackend.onrender.com" 
+
 
   const goToRegister=()=>{
     Navigate("/investorRegister")
