@@ -33,7 +33,7 @@ function App() {
         onLoaderFinished={() => setProgress(0)}
       />
       <Admin decodeToken={decodeToken} />
-        <Navbar />
+        <Navbar decodeToken={decodeToken}/>
         <SideNavbar />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -33,7 +33,6 @@ export default function Stories(props) {
                         <h1>"Explore the Stories Behind Thriving Startups and Chart Your Course to Entrepreneurial Success."</h1>
                         <img src={successIllustartion} alt="titleImage" className='imgTop'></img>
                     </div>
-                    {console.log(stories)}
                     <div className='storiesInnerBottom'>
                         <h4>ALL STORIES</h4>
                         <div className='searchAndFilters'>

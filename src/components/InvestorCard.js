@@ -2,16 +2,15 @@ import React from 'react'
 
 export default function InvestorCard(props) {
     const goUp = ()=>{
-        document.getElementById("investorCardInner").style.transform = "translateY(-50%)"
+        document.getElementById(`investorCardInner${props.index}`).style.transform = "translateY(-50%)"
     }
     const goDown = ()=>{
-        document.getElementById("investorCardInner").style.transform = "translateY(0%)"
+        document.getElementById(`investorCardInner${props.index}`).style.transform = "translateY(0%)"
     }
     const{name,description,interest,email,imgLink,profession,linkedIn,twitter,experience} = props.details
     return (
         <div className='investorCard'>
-            {console.log(props.details)}
-            <div className='investorCardInner' id='investorCardInner'>
+            <div className='investorCardInner' id={`investorCardInner${props.index}`}>
                 <div className='investorCardSection1'>
                     <div className='investorImage'>
                         <img src={imgLink}></img>

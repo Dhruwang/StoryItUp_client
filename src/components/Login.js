@@ -4,7 +4,7 @@ import { Link,useNavigate } from 'react-router-dom'
 
 export default function Login(props) {
 
-    const host = "https://storyitupbackend.onrender.com"  
+    const host = "https://storyitupbackend.onrender.com"   
     // const host = "http://localhost:8000" 
 
     const [credentials, setcredentials] = useState({ email: "", password: "" })

@@ -2,9 +2,10 @@ import React,{useEffect} from 'react'
 import logo from "../images/logo.png"
 import { Link,useNavigate,useLocation } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar(props) {
     const Navigate = useNavigate();
     let location = useLocation();
+    let role = ""
     const handleResponsiveNavbar = ()=>{
         const sideNavbar = document.getElementById("sideNavbar");
         if(sideNavbar.style.left==="100vw"){
@@ -22,6 +23,19 @@ export default function Navbar() {
       const handleLogin = () => {
         Navigate("/login")
       }
+
+      const checkRole =()=>{
+        if(localStorage.getItem("token")){
+            role = props.decodeToken(localStorage.getItem("token")).role
+        }
+        if(role==="investor"){
+            // document.getElementById("investors").style.display = "none" 
+        }
+      }
+      useEffect(() => {
+        checkRole()
+      }, [])
+      
 
     
     return (
