@@ -7,7 +7,7 @@ export default function InvestorCard(props) {
     const goDown = ()=>{
         document.getElementById("investorCardInner").style.transform = "translateY(0%)"
     }
-    const{name,description,interest,email,imgLink,profession,linkedin,twitter,experience} = props.details
+    const{name,description,interest,email,imgLink,profession,linkedIn,twitter,experience} = props.details
     return (
         <div className='investorCard'>
             {console.log(props.details)}
@@ -21,9 +21,8 @@ export default function InvestorCard(props) {
                         <p>{profession}</p>
                         <div className='investorLinks'>
                         <a href={`mailto:${email}`} id='mailIcon'><i class="bi bi-envelope" ></i></a>
-                        <a href={linkedin}><i class="bi bi-linkedin"></i></a>
+                        <a href={linkedIn}><i class="bi bi-linkedin"></i></a>
                         <a href={twitter}><i class="bi bi-twitter"></i></a>
-                        <i class="bi bi-twitter"></i>
                         </div>
                     </div>
                     <div className='investorInterestDiv'>

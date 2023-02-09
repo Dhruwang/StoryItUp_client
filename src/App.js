@@ -12,9 +12,18 @@ import Publish from './components/Publish';
 import Storyfull from './components/Storyfull';
 import Investor from './components/Investor';
 import InvestorRegister from './components/InvestorRegister';
+import Admin from './components/Admin';
 
 function App() {
   const [progress, setProgress] = useState(0)
+
+  
+  function decodeToken(token) {
+    var ca = token;
+    var base64Url = ca.split('.')[1];
+    var decodedValue = JSON.parse(window.atob(base64Url));
+    return decodedValue.user
+}
   return (
     <div className="App">
       <BrowserRouter>
@@ -23,17 +32,18 @@ function App() {
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
+      <Admin decodeToken={decodeToken} />
         <Navbar />
         <SideNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login  setProgress={setProgress} />} />
-          <Route path="/signup" element={<Signup  setProgress={setProgress}/>} />
-          <Route path="/stories" element={<Stories  setProgress={setProgress}/>} />
-          <Route path="/publish" element={<Publish  setProgress={setProgress}/>} />
-          <Route path="/investor" element={<Investor  setProgress={setProgress}/>} />
-          <Route path="/story/:id" element={<Storyfull  setProgress={setProgress}/>} />
-          <Route path="/investorRegister" element={<InvestorRegister  setProgress={setProgress}/>} />
+          <Route path="/login" element={<Login  setProgress={setProgress} decodeToken={decodeToken} />} />
+          <Route path="/signup" element={<Signup  setProgress={setProgress} decodeToken={decodeToken}/>} />
+          <Route path="/stories" element={<Stories  setProgress={setProgress} decodeToken={decodeToken}/>} />
+          <Route path="/publish" element={<Publish  setProgress={setProgress} decodeToken={decodeToken}/>} />
+          <Route path="/investor" element={<Investor  setProgress={setProgress} decodeToken={decodeToken}/>} />
+          <Route path="/story/:id" element={<Storyfull  setProgress={setProgress} decodeToken={decodeToken}/>} />
+          <Route path="/investorRegister" element={<InvestorRegister  setProgress={setProgress} decodeToken={decodeToken}/>} />
           
         </Routes>
       </BrowserRouter>

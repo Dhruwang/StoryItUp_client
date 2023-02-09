@@ -1,54 +1,57 @@
 import React, { useState } from 'react'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Signup(props) {
 
     const [credentials, setCredentials] = useState({ email: "", password: "", cpassword: "", role: "" })
     const Navigate = useNavigate();
-    const host = "https://storyitupbackend.onrender.com"
+    // const host = "https://storyitupbackend.onrender.com" 
+    const host = "http://localhost:8000"
+
 
     const handleOnSubmit = async (e) => {
         e.preventDefault()
-        if(credentials.email.length===0 || credentials.password.length===0){
+        if (credentials.email.length === 0 || credentials.password.length === 0) {
             document.getElementById("fillAlert").style.display = "block"
             return;
         }
-        if(credentials.password!==credentials.cpassword){
+        if (credentials.password !== credentials.cpassword) {
             document.getElementById("passwordMatchAlert").style.display = "block"
             return;
         }
-        props.setProgress(20) 
+        props.setProgress(20)
         const response = await fetch(`${host}/auth/createUser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ email: credentials.email, password: credentials.password ,role : credentials.role })
+            body: JSON.stringify({ email: credentials.email, password: credentials.password, role: credentials.role })
 
         });
         const json = await response.json()
 
         // show error if user already exist 
-        if(json.error==="user already exist"){
+        if (json.error === "user already exist") {
             document.getElementById("fillAlert2").style.display = "block"
             return
         }
         if (json.success) {
             // save authToken and redirect 
             props.setProgress(100)
+            props.decodeToken(json.token)
             localStorage.setItem('token', json.token)
-            
+
             // props.showAlert("success", "SignUp successfull") 
             Navigate("/")
         }
-        
+
         else {
             // props.showAlert("danger", "invalid details") 
         }
     }
 
     const handleOnChange = (event) => {
-        setCredentials({ email:document.getElementById("email").value,password : document.getElementById("password").value,cpassword : document.getElementById("cpassword").value, role:document.getElementById("role").value || "reader" })
+        setCredentials({ email: document.getElementById("email").value, password: document.getElementById("password").value, cpassword: document.getElementById("cpassword").value, role: document.getElementById("role").value || "reader" })
     }
 
     return (

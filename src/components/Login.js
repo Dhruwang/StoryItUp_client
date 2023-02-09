@@ -1,8 +1,11 @@
 import React, { useState,useEffect } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
-const host = "https://storyitupbackend.onrender.com"
+
 
 export default function Login(props) {
+
+    // const host = "https://storyitupbackend.onrender.com" 
+    const host = "http://localhost:8000"
 
     const [credentials, setcredentials] = useState({ email: "", password: "" })
     const Navigate = useNavigate();
@@ -26,6 +29,7 @@ export default function Login(props) {
             props.setProgress(100)
             // save authToken and redirect 
             localStorage.setItem('token', json.token)
+            props.decodeToken(json.token)
             Navigate("/")
             // props.showAlert("success", "login successfully") 
         }

@@ -77,6 +77,19 @@ p,h1,h2,h3,h4,h5,h6{
 .btn-container > *{
   margin: 0rem 0.5rem;
 }
+/* admin page css starts */
+.admin{
+  width: 100%;
+  height: 1rem;
+  background-color: green;
+  position: fixed;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+/* admin page css ends  */
 
 /* navbar css starts  */
 .navbar {
