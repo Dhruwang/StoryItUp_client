@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Footer from './Footer';
 
 export default function Publish(props) {
 
@@ -133,7 +134,8 @@ export default function Publish(props) {
                         <button className='btn'>Publish</button>
                     </form>
                     </div>
-                    
+                    <br></br>
+                    <Footer />
                 </div>
 
             </div>

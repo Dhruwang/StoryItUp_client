@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import InvestorCard from './InvestorCard'
 import { useNavigate } from 'react-router-dom'
+import Footer from './Footer';
 
 export default function Investor(props) {
   const Navigate = useNavigate();
@@ -53,7 +54,9 @@ useEffect(() => {
               return <InvestorCard details={element} index={index} />
             })}
           </div>
+          <Footer />
             </div>  
+           
         </div>
     </div>
   )

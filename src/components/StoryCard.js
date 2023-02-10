@@ -15,7 +15,7 @@ export default function StoryCard(props) {
             </div>
             <div className='storyCardContent'>
                 <div className='startupName text-secondary'>
-                    {props.name}
+                    {props.name}{props.verified && <i class="bi bi-patch-check verified"></i>}
                 </div>
                 <div className='startupDescription'>
                     {props.description.slice(0,100)}

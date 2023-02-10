@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Footer from './Footer';
 
 export default function Signup(props) {
 
@@ -90,6 +91,7 @@ export default function Signup(props) {
                             </form>
                         </div>
                     </div>
+                    <Footer />
                 </div>
             </div>
         </div>

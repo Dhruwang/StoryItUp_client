@@ -1,20 +1,20 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 
 export default function InvestorRegister() {
 
-    const [details, setdetails] = useState({name:"",email:"",experience:"",profession:"",interest:"",description:"",imgLink:"",linkedin:"",twitter:""})
+    const [details, setdetails] = useState({ name: "", email: "", experience: "", profession: "", interest: "", description: "", imgLink: "", linkedin: "", twitter: "" })
     // const host = "http://localhost:8000" 
-    const host = "https://storyitupbackend.onrender.com" 
+    const host = "https://storyitupbackend.onrender.com"
 
 
     const handleOnSubmit = async (e) => {
         e.preventDefault();
-        if(details.name===""||details.description===""||details.profession===""||details.interest===""||details.experience===""||details.imgLink===""||details.linkedin===""){
+        if (details.name === "" || details.description === "" || details.profession === "" || details.interest === "" || details.experience === "" || details.imgLink === "" || details.linkedin === "") {
             document.getElementById("InvestorMissingFieldAlert").style.display = "block"
             return
         }
-        
+
         const response = await fetch(`${host}/investor/saveInvestor`, {
             method: 'POST',
             headers: {
@@ -26,15 +26,15 @@ export default function InvestorRegister() {
                 description: details.description,
                 profession: details.profession,
                 linkedin: details.linkedin,
-                imgLink:details.imgLink,
-                twitter:details.twitter,
-                interest:details.interest,
-                experience:details.experience
+                imgLink: details.imgLink,
+                twitter: details.twitter,
+                interest: details.interest,
+                experience: details.experience
             })
 
         });
-        if(response.ok===true){
-            setdetails({name:"",email:"",experience:"",profession:"",interest:"",description:"",imgLink:"",linkedin:"",twitter:""})
+        if (response.ok === true) {
+            setdetails({ name: "", email: "", experience: "", profession: "", interest: "", description: "", imgLink: "", linkedin: "", twitter: "" })
         }
 
 
@@ -48,6 +48,7 @@ export default function InvestorRegister() {
         <div className="publish">
             <div className="vectorBackground publishMain">
                 <div className="publishInner">
+                    <div id="publishForm" >
                     <div className="investorRegisterCover">
                         <img src="https://images.unsplash.com/photo-1642052502780-8ee67e3bf930?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"></img>
                     </div>
@@ -171,6 +172,9 @@ export default function InvestorRegister() {
                         <p id="InvestorMissingFieldAlert" className="text-red">Fields marked with * are compulsary to fill</p>
                         <button className="btn">Submit</button>
                     </form>
+
+                    </div>
+                    
                 </div>
             </div>
         </div>

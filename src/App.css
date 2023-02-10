@@ -6,6 +6,9 @@
 ::placeholder{
   font-size: 0.7rem;
 }
+.verified{
+  margin-left: 0.5rem;
+}
 body{
   background-image: linear-gradient(to right, #0B0023, #15003A);
 }

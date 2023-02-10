@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import successIllustartion from "../images/ddemo.jpg"
+import Footer from './Footer'
 import StoryCard from './StoryCard'
 
 
@@ -62,10 +63,11 @@ export default function Stories(props) {
                         <div className='storiesContainer '>
                             {stories && stories.map((element) => {
 
-                                return <StoryCard name={element.name} description={element.description} image={element.imgLink} _id={element._id} />
+                                return <StoryCard name={element.name} description={element.description} image={element.imgLink} _id={element._id} verified={element.verified} />
                             })}
                         </div>
                     </div>
+                <Footer />
                 </div>
             </div>
         </div>

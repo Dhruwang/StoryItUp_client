@@ -46,7 +46,6 @@ function App() {
           <Route path="/about" element={<About  setProgress={setProgress} decodeToken={decodeToken}/>} />
           <Route path="/story/:id" element={<Storyfull  setProgress={setProgress} decodeToken={decodeToken}/>} />
           <Route path="/investorRegister" element={<InvestorRegister  setProgress={setProgress} decodeToken={decodeToken}/>} />
-          
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,12 +1,14 @@
 import React,{useEffect,useState} from 'react'
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 export default function Storyfull(props) {
     const host = "https://storyitupbackend.onrender.com" 
-    // const host = "http://localhost:8000";
+    // const host = "http://localhost:8000"; 
     const Navigate = useNavigate();
     const [story, setstory] = useState()
     const [editable, seteditable] = useState("false")
+    let verify = ""
 
 
 
@@ -69,21 +71,31 @@ export default function Storyfull(props) {
         });
         
     }
-    const fetchRole = ()=>{
-        if(document.getElementsByClassName("storyEditIcons")[0] && !localStorage.getItem("token")){
-            // console.log(document.getElementsByClassName("storyEditIcons")[0])
-            document.getElementsByClassName("storyEditIcons")[0].style.display = "none" 
-            return;
+    const handleVerify =async ()=>{
+        if(story.verified===true){
+            verify = false
         }
-        else if(document.getElementsByClassName("storyEditIcons")[0] && props.decodeToken(localStorage.getItem("token")).role!=="admin"){
-            document.getElementsByClassName("storyEditIcons")[0].style.display = "none" 
-            return
+        else{
+            verify = true;
         }
+       
+        const response = await fetch(`${host}/story/editVerify?id=${story._id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                verified:verify
+            })
+        });
+        if(response.ok){
+            window.location.reload()
+        }
+        console.log(response.ok)
     }
 
     useEffect(() => {
       fetchStory()
-    //   fetchRole() 
     }, [])
     
 
@@ -96,12 +108,13 @@ export default function Storyfull(props) {
                             <button className='btn' onClick={handleDelete}><i class="bi bi-trash"></i></button>
                             <button className='btn' onClick={handleEdit} id="storyEditBtn"><i class="bi bi-pen"></i></button> 
                             <button className='btn' onClick={handleSave} id="storySaveBtn"><i class="bi bi-save"></i></button> 
+                            <button className='btn' onClick={handleVerify} id="storyVerifyBtn"><i class="bi bi-patch-check"></i></button> 
                             
                         </div>}
                     
                         <p>JOURNEY OF </p>
                         <div className='storyFullInnerTopMain'>
-                            <h1 contentEditable={editable} id="storyName" >{story.name}</h1>
+                            <h1 contentEditable={editable} id="storyName" >{story.name}{story.verified && <i class="bi bi-patch-check verified"></i>}</h1>
                             <p contentEditable={editable} id="storyDescription">{story.description}</p>
                         </div>
                         <div className='startupLinks'>
@@ -146,6 +159,7 @@ export default function Storyfull(props) {
                             <p className='solutionP' contentEditable={editable} id="storySolution">{story.solution}</p>
                         </div>}
                     </div>
+                <Footer />
                 </div>
             </div>
         </div>

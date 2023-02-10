@@ -72,11 +72,6 @@ export default function Login(props) {
                                     <label>Password</label>
                                     <input type="password" name='password' className='formInput' value={credentials.password} onChange={handleOnChange} placeholder='Enter your password'></input>
                                 </div>
-                                <div className='formItemInline'>
-                                    <input type="checkbox"></input>
-                                    <label>Remember Me</label>
-                                </div>
-                                <a className='text-secondary forgetBtn' href='/forgotpassword'>Forgot Password</a>
                                 <p className='text-red ' id='invalidCred'>Invalid Credentials</p>
                                 <br></br>
                                 <button className='btn' type='submit'>Sign In</button>
