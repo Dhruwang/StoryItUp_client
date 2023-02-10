@@ -84,11 +84,7 @@ export default function Publish(props) {
                         </div>
                         <div className='storyFormElement'>
                             <label>Sector*</label>
-                            <select name="sector" id="sector" className='storyFormInput sectorDropdown' onChange={handleOnChange} >
-                                <option value="Education">Education</option>
-                                <option value="Finance">Finance</option>
-                                <option value="Tech">Tech</option>
-                            </select>
+                            <input type="text" name='sector' value={details.sector} id='sector' onChange={handleOnChange} className='storyFormInput'></input>
                         </div>
                         <div className='storyFormElement'>
                             <label>Year Founded*</label>
