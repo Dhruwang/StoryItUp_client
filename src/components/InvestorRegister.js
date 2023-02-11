@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 export default function InvestorRegister() {
+    const Navigate = useNavigate();
 
     const [details, setdetails] = useState({ name: "", email: "", experience: "", profession: "", interest: "", description: "", imgLink: "", linkedin: "", twitter: "" })
     // const host = "http://localhost:8000" 
@@ -34,7 +36,9 @@ export default function InvestorRegister() {
 
         });
         if (response.ok === true) {
-            setdetails({ name: "", email: "", experience: "", profession: "", interest: "", description: "", imgLink: "", linkedin: "", twitter: "" })
+            // setdetails({ name: "", email: "", experience: "", profession: "", interest: "", description: "", imgLink: "", linkedin: "", twitter: "" })
+            localStorage.removeItem("pending")
+            Navigate("/")
         }
 
 

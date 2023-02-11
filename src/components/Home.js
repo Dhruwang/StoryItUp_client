@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
@@ -11,6 +12,16 @@ export default function Home() {
   const goToStoriesPage = ()=>{
     Navigate("/stories")
   }
+  const checkPending=()=>{
+    if(localStorage.getItem("pending")){
+      Navigate("/investorRegister")
+    }
+  }
+  useEffect(() => {
+    checkPending();
+  
+  }, [])
+  
 
   return (
     <div className='home'>

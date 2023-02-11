@@ -10,6 +10,7 @@ export default function Publish(props) {
     // const host = "http://localhost:8000" 
     useEffect(() => {
         props.setProgress(100)
+        checkPending()
         if(!localStorage.getItem("token")){
             document.getElementById("publishForm").style.display = "none"
         }
@@ -17,6 +18,11 @@ export default function Publish(props) {
             document.getElementById("publishInnerAlt").style.display = "none"
         }
     }, [])
+    const checkPending=()=>{
+        if(localStorage.getItem("pending")){
+          Navigate("/investorRegister")
+        }
+      }
 
     const addProblem = (e) => {
         e.preventDefault();

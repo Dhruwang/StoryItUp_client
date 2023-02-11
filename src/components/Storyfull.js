@@ -8,6 +8,7 @@ export default function Storyfull(props) {
     const Navigate = useNavigate();
     const [story, setstory] = useState()
     const [editable, seteditable] = useState("false")
+    const [bookmark, setbookmark] = useState(false)
     let verify = ""
 
 
@@ -93,9 +94,23 @@ export default function Storyfull(props) {
         }
         console.log(response.ok)
     }
+    const handleBookMark=()=>{
+        if(bookmark===false){
+            setbookmark(true)
+        }
+        else{
+            setbookmark(false)
+        }
+    }
+    const checkPending=()=>{
+        if(localStorage.getItem("pending")){
+          Navigate("/investorRegister")
+        }
+      }
 
     useEffect(() => {
       fetchStory()
+      checkPending();
     }, [])
     
 
@@ -124,6 +139,8 @@ export default function Storyfull(props) {
                             {story.website && <a href={story.website} target="_blank">
                                 <i class="bi bi-link"></i>
                             </a>}
+                            <button className='storyBookmarkBtn' onClick={handleBookMark} id="storyBookmarkBtn"><i class={`bi bi-${bookmark?"bookmark-check-fill":"bookmark"}`}></i></button> 
+
                         </div>
                         <div className='storyFullInnerCover'>
                             <img src={story.imgLink}></img>

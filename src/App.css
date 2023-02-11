@@ -163,7 +163,7 @@ p,h1,h2,h3,h4,h5,h6{
 /* navbar css ends  */
 
 /* home page css starts  */
-.home ,.login,.signup,.stories,.publish,.storyfull,.investor{
+.home ,.login,.signup,.stories,.publish,.storyfull,.investor,.chats{
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(to right, #0B0023, #15003A);
@@ -333,7 +333,7 @@ p,h1,h2,h3,h4,h5,h6{
   flex-direction:column;
   justify-content: end; 
 }
-.publishInner,.storiesInner,.storyfullInner,.investorInner{
+.publishInner,.storiesInner,.storyfullInner,.investorInner,.chatsInner{
   height: 90%;
   width: 90VW;
   background-color: rgba(0, 0, 0, 0.393);
@@ -396,7 +396,8 @@ p,h1,h2,h3,h4,h5,h6{
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
 }
 /* stories css ends */
 /* storycard css starts  */
@@ -480,6 +481,19 @@ p,h1,h2,h3,h4,h5,h6{
 }
 #storySaveBtn{
   display: none;
+}
+#storyBookmarkBtn{
+  width: 3rem;
+  margin: 0rem 0.5rem;
+}
+.storyBookmarkBtn{
+  background-color: transparent;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .storyEditIcons button{
   width: 3rem;
@@ -660,9 +674,7 @@ p,h1,h2,h3,h4,h5,h6{
 /* investor page css ends*/
 
 /* about page start */
-.aboutImg img{
-  /* height: 35rem;  */
-}
+
 .about1{
   display: flex;
   margin-top: 5rem;
@@ -724,6 +736,8 @@ p,h1,h2,h3,h4,h5,h6{
 }
 
 /* about page ends */
+
+
 
 
 @media (max-width: 1200px) {

@@ -33,11 +33,17 @@ const checkRole =()=>{
       document.getElementById("registerInvestorBtn").style.display = "none"
   }
 }
+const checkPending=()=>{
+  if(localStorage.getItem("pending")){
+    Navigate("/")
+  }
+}
 
 useEffect(() => {
   checkRole()
     props.setProgress(100)
     fetchInvestors()
+    checkPending()
 }, [])
 
   return (

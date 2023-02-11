@@ -41,9 +41,16 @@ export default function Signup(props) {
             props.setProgress(100)
             props.decodeToken(json.token)
             localStorage.setItem('token', json.token)
+            if(props.decodeToken(localStorage.getItem("token")).role==="investor"){
+                Navigate("/investorRegister")
+                localStorage.setItem("pending",true)
+            }
 
-            // props.showAlert("success", "SignUp successfull") 
-            Navigate("/")
+            // props.showAlert("success", "SignUp successfull")
+            else{
+                Navigate("/")
+            } 
+            
         }
 
         else {

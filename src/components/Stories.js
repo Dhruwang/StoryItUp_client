@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import successIllustartion from "../images/ddemo.jpg"
 import Footer from './Footer'
 import StoryCard from './StoryCard'
-
+import { useNavigate } from 'react-router-dom'
 
 export default function Stories(props) {
 
     const [stories, setstories] = useState()
+    const Navigate = useNavigate();
     const host = "https://storyitupbackend.onrender.com" 
     // const host = "http://localhost:8000" 
 
@@ -33,10 +34,16 @@ export default function Stories(props) {
         setstories(json)
         
     }
+    const checkPending=()=>{
+        if(localStorage.getItem("pending")){
+          Navigate("/investorRegister")
+        }
+      }
 
     useEffect(() => {
         props.setProgress(100)
         fetchStories()
+        checkPending()
     }, [])
 
     return (
