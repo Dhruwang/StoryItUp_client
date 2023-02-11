@@ -253,6 +253,7 @@ p,h1,h2,h3,h4,h5,h6{
 .loginInner{
   width: 25rem;
   display: flex;
+  flex-direction: column;
 }
 .loginInnerLeft{
   width: 100%;
@@ -620,6 +621,10 @@ p,h1,h2,h3,h4,h5,h6{
 }
 .investorPast{
   margin-top: 1rem;
+}
+.messageBtn{
+  background-color: transparent;
+  border: 1px solid black;
 }
 
 /* investor card css ends */

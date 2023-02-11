@@ -14,6 +14,7 @@ import Investor from './components/Investor';
 import InvestorRegister from './components/InvestorRegister';
 import Admin from './components/Admin';
 import About from './components/About';
+import Chat from './components/Chat';
 
 function App() {
   const [progress, setProgress] = useState(0)
@@ -44,6 +45,7 @@ function App() {
           <Route path="/publish" element={<Publish  setProgress={setProgress} decodeToken={decodeToken}/>} />
           <Route path="/investor" element={<Investor  setProgress={setProgress} decodeToken={decodeToken}/>} />
           <Route path="/about" element={<About  setProgress={setProgress} decodeToken={decodeToken}/>} />
+          <Route path="/chat/:id" element={<Chat  setProgress={setProgress} decodeToken={decodeToken}/>} />
           <Route path="/story/:id" element={<Storyfull  setProgress={setProgress} decodeToken={decodeToken}/>} />
           <Route path="/investorRegister" element={<InvestorRegister  setProgress={setProgress} decodeToken={decodeToken}/>} />
         </Routes>
