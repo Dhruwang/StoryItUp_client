@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# StoryItUp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+StoryItUp is a web portal for displaying the success stories of startups from across the world.  
+Main aim is to motivate the youth and inspire them from these stories so that they can know about the journey and problems that were faced by these startups and how where they overcomed.  
 
-## Available Scripts
+Built using **MERN** stack framework 
 
-In the project directory, you can run:
+### Live site Link
+http://storyitup403.netlify.app
 
-### `npm start`
+### Server Hosted on 
+https://storyitupbackend.onrender.com
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+* Role based Login 
+* Admin Login
+* Upload and Publish stories
+* Detailed Story Page
+* Story Submit form
+* Investor cards
+* Investor register form
+* Verified Story Tag
+* Admin can edit, delete and mark a story as verified
+* Fully responsive
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![aboutPage_image](https://user-images.githubusercontent.com/67850763/220308231-d0770be1-9513-46cd-bbde-3d7ec1c17d74.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Steps to setup
 
-### `npm run build`
+Step 1
+Cloning repository
+```
+git clone https://github.com/Dhruwang/StoryItUp_client.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Step 2
+Switch to StoryItup_client Folder
+```
+cd StoryItUp_client
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Step 3
+Installing required packages(You should have node installed on your system to run this project)
+```
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Step 4
 
-### `npm run eject`
+Now you are good to go, 
+```
+npm run start
+```
+this will run React server on your localhost Port 3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![admin](https://user-images.githubusercontent.com/67850763/220310411-b196b0db-d23a-4041-b785-40b6466f1147.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![createAccount](https://user-images.githubusercontent.com/67850763/220310431-d0661d03-23ef-482e-b1ee-a62617085b0b.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Individual_story_page](https://user-images.githubusercontent.com/67850763/220310434-799d1cf7-b168-4fb7-bd95-6bae7981ad36.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Individual_story_page_2](https://user-images.githubusercontent.com/67850763/220310441-827b44bf-b4c0-404f-82ee-407c1fc95d3a.png)
 
-## Learn More
+![Investor_card](https://user-images.githubusercontent.com/67850763/220310446-51519695-40f7-4fc3-96d2-44fc696145b8.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![storiesPage](https://user-images.githubusercontent.com/67850763/220310454-767c3d29-129e-46aa-93a5-93142e3cd4db.png)
