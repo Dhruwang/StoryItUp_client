@@ -6,7 +6,7 @@ Main aim is to motivate the youth and inspire them from these stories so that th
 Built using **MERN** stack framework 
 
 ### Live site Link
-http://storyitup403.netlify.app
+https://storyitup403.netlify.app
 
 ### Server Hosted on 
 https://storyitupbackend.onrender.com
